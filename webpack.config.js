@@ -45,7 +45,8 @@ module.exports = {
     new CopyWebpackPlugin([{
       from: 'node_modules/summernote/dist/lang', to: '../lang'
     }]),
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new webpack.IgnorePlugin(/^codemirror$/)
   ],
   module: {
     rules: [
